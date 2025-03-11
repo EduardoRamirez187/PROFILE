@@ -1,0 +1,113 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que padding y borders no afecten el tamaño total */
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    box-sizing: border-box; /* Incluye padding en el ancho */
+}
+
+.sidebar {
+    flex: 1;
+    max-width: 25%; /* Ocupa 1/4 del ancho en pantallas grandes */
+    min-width: 200px; /* Ancho mínimo */
+    background: linear-gradient(135deg, #2c3e50, #4a69bd);
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center; /* Centra el contenido en móviles */
+}
+
+.sidebar img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.main-content {
+    flex: 3;
+    max-width: 75%; /* Ocupa 3/4 del ancho */
+    min-width: 300px; /* Ancho mínimo */
+    background: #ffffff;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+.main-content h1 {
+    font-size: 1.8em;
+    text-align: center;
+    color: #2c3e50;
+}
+
+.main-content h2 {
+    font-size: 1.5em;
+    border-bottom: 2px solid #e74c3c;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+footer {
+    background: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Disposición en columna */
+        width: 100%; /* Asegura que ocupe todo el ancho */
+    }
+
+    .sidebar {
+        width: 100%; /* Asegura que ocupe todo el ancho */
+        padding: 10px; /* Agrega un pequeño padding para el contenido */
+        margin: 0; /* Sin márgenes extra */
+    }
+
+    .main-content {
+        width: 100%; /* Asegura que ocupe todo el ancho */
+        padding: 10px; /* Agrega un pequeño padding para el contenido */
+        margin: 0; /* Sin márgenes extra */
+    }
+
+    .sidebar img {
+        max-width: 100%; /* Imagen ocupa todo el ancho disponible */
+        height: auto; /* Mantiene proporción de la imagen */
+        display: block; /* Se asegura de que sea un bloque */
+        margin: 0 auto; /* Centra la imagen horizontalmente */
+    }
+
+    .sidebar p {
+        font-size: 0.9em; /* Ajusta el tamaño del texto */
+        line-height: 1.5; /* Mejora la legibilidad */
+    }
+
+    .main-content h1, 
+    .main-content h2, 
+    .main-content p {
+        text-align: left; /* Texto alineado a la izquierda */
+        font-size: 1em; /* Texto más compacto */
+        line-height: 1.5; /* Mejora la legibilidad */
+    }
+
+    .main-content h1 {
+        font-size: 1.3em; /* Título principal más grande */
+    }
+
+    footer {
+        font-size: 0.8em; /* Texto del footer más pequeño */
+        text-align: center; /* Centra el texto del footer */
+    }
+}
